@@ -1,8 +1,19 @@
 package com.xfactor.lably.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "tbl_test")
 public class Test {
+    @Id
+    @GeneratedValue
+    @Column(name = "id")
+    private Long id;
+    @Column(name = "name")
     String name;
+    @Column(name = "desc")
     String description;
+    @Column(name = "price")
     double price;
     public String getName() {
         return name;

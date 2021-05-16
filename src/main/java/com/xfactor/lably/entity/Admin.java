@@ -1,7 +1,21 @@
 package com.xfactor.lably.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tbl_admin")
 public class Admin {
+    @Id
+    @GeneratedValue
+    @Column(name = "id")
+    private long id;
+    @Column(name = "name")
     String name;
+    @Column(name = "username")
     String username;
     public String getName() {
         return name;
@@ -21,5 +35,6 @@ public class Admin {
     public void setPassword(String password) {
         this.password = password;
     }
+    @Column(name = "password")
     String password;
 }
